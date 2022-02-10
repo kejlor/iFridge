@@ -11,6 +11,11 @@
 		E9CBF65927B5543300DDA477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF65827B5543300DDA477 /* ContentView.swift */; };
 		E9CBF65B27B5543400DDA477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF65A27B5543400DDA477 /* Assets.xcassets */; };
 		E9CBF65E27B5543400DDA477 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF65D27B5543400DDA477 /* Preview Assets.xcassets */; };
+		E9CBF66627B554F100DDA477 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF66427B554F100DDA477 /* Main.xcdatamodeld */; };
+		E9CBF66B27B5578700DDA477 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF66A27B5578700DDA477 /* CoreDataStore.swift */; };
+		E9CBF66E27B55EB000DDA477 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF66D27B55EB000DDA477 /* ProductsViewModel.swift */; };
+		E9CBF67027B5619700DDA477 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF66F27B5619700DDA477 /* ProductsView.swift */; };
+		E9CBF67327B5627B00DDA477 /* PreviewProvider+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF67227B5627B00DDA477 /* PreviewProvider+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		E9CBF65827B5543300DDA477 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9CBF65A27B5543400DDA477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CBF65D27B5543400DDA477 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9CBF66527B554F100DDA477 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		E9CBF66A27B5578700DDA477 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		E9CBF66D27B55EB000DDA477 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		E9CBF66F27B5619700DDA477 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		E9CBF67227B5627B00DDA477 /* PreviewProvider+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +62,13 @@
 			isa = PBXGroup;
 			children = (
 				E9CBF65627B5543300DDA477 /* iFridgeApp.swift */,
+				E9CBF67127B5626900DDA477 /* Extension */,
+				E9CBF66827B5572100DDA477 /* Core */,
+				E9CBF66727B5571200DDA477 /* CoreData */,
 				E9CBF65827B5543300DDA477 /* ContentView.swift */,
 				E9CBF65A27B5543400DDA477 /* Assets.xcassets */,
 				E9CBF65C27B5543400DDA477 /* Preview Content */,
+				E9CBF66427B554F100DDA477 /* Main.xcdatamodeld */,
 			);
 			path = iFridge;
 			sourceTree = "<group>";
@@ -65,6 +79,47 @@
 				E9CBF65D27B5543400DDA477 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9CBF66727B5571200DDA477 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBF66A27B5578700DDA477 /* CoreDataStore.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E9CBF66827B5572100DDA477 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBF66C27B55E9B00DDA477 /* ViewModel */,
+				E9CBF66927B5572C00DDA477 /* View */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E9CBF66927B5572C00DDA477 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBF66F27B5619700DDA477 /* ProductsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9CBF66C27B55E9B00DDA477 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBF66D27B55EB000DDA477 /* ProductsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9CBF67127B5626900DDA477 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBF67227B5627B00DDA477 /* PreviewProvider+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CBF66627B554F100DDA477 /* Main.xcdatamodeld in Sources */,
 				E9CBF65927B5543300DDA477 /* ContentView.swift in Sources */,
+				E9CBF67327B5627B00DDA477 /* PreviewProvider+Ext.swift in Sources */,
+				E9CBF67027B5619700DDA477 /* ProductsView.swift in Sources */,
+				E9CBF66B27B5578700DDA477 /* CoreDataStore.swift in Sources */,
+				E9CBF66E27B55EB000DDA477 /* ProductsViewModel.swift in Sources */,
 				E9CBF65727B5543300DDA477 /* iFridgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +401,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9CBF66427B554F100DDA477 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9CBF66527B554F100DDA477 /* Main.xcdatamodel */,
+			);
+			currentVersion = E9CBF66527B554F100DDA477 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E9CBF64B27B5543300DDA477 /* Project object */;
 }
