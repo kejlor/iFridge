@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct iFridgeApp: App {
+    let coreDataStore = CoreDataStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProductsView(storage: coreDataStore)
         }
     }
 }
