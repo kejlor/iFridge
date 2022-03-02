@@ -17,7 +17,7 @@ struct ProductsView: View {
     var body: some View {
         VStack {
             addNewProduct
-            if vm.storage.products.isEmpty {
+            if vm.products.isEmpty {
                 emptyContent
             } else {
                 productsList
@@ -67,7 +67,7 @@ extension ProductsView {
     
     private var productsList: some View {
         List {
-            ForEach(vm.storage.products, id: \.self) { product in
+            ForEach(vm.products, id: \.self) { product in
                 Text(product.name ?? "no name")
             }
         }

@@ -12,6 +12,7 @@ final class ProductsViewModel: ObservableObject {
     let storage: CoreDataStore
     let viewContext: NSManagedObjectContext
     
+    @Published var products: [Product]
     @Published var productName = ""
     @Published var dateAdded = Date()
     @Published var isAddingProduct = false
@@ -22,11 +23,13 @@ final class ProductsViewModel: ObservableObject {
         self.storage = storage
         viewContext = storage.container.viewContext
         storage.fetchProducts()
+        self.products = storage.products
     }
     
     func addProduct() {
         storage.addProduct(productName: newProductName, dateAdded: dateAdded)
         storage.saveData()
         storage.fetchProducts()
+        products = storage.products
     }
 }
