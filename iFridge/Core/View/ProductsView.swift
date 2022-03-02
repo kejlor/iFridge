@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ProductsView: View {
     @StateObject private var vm: ProductsViewModel
-    @State private var isAddingProduct = false
-    @State private var newProductName = ""
-    @State private var newProductDate = Date()
     
     init(storage: CoreDataStore) {
         _vm = StateObject(wrappedValue: ProductsViewModel(storage: storage))
@@ -20,7 +17,7 @@ struct ProductsView: View {
     var body: some View {
         VStack {
             addNewProduct
-            if vm.products.isEmpty {
+            if vm.storage.products.isEmpty {
                 emptyContent
             } else {
                 productsList
@@ -39,17 +36,15 @@ extension ProductsView {
     private var addNewProduct: some View {
         VStack {
             Spacer()
-            TextField("New product name", text: $newProductName)
+            TextField("New product name", text: $vm.newProductName)
                 .multilineTextAlignment(TextAlignment.center)
-            DatePicker(selection: $newProductDate, in: ...Date(), displayedComponents: .date) {
+            DatePicker(selection: $vm.newProductDate, in: ...Date(), displayedComponents: .date) {
                 Text("Select a date")
             }
             Button {
-                vm.addProduct(productName: newProductName, dateAdded: newProductDate)
-                vm.saveData()
-                vm.fetchProducts()
-                newProductName = ""
-                newProductDate = Date()
+                vm.addProduct()
+                vm.newProductName = ""
+                vm.newProductDate = Date()
             } label: {
                 Text("Add product")
                     .foregroundColor(Color.primary)
@@ -58,7 +53,7 @@ extension ProductsView {
                     .background(Color.blue)
                     .cornerRadius(40)
             }
-            .disabled(newProductName.isEmpty)
+            .disabled(vm.newProductName.isEmpty)
         }
         .padding(.vertical, 40)
     }
@@ -72,7 +67,7 @@ extension ProductsView {
     
     private var productsList: some View {
         List {
-            ForEach(vm.products, id: \.self) { product in
+            ForEach(vm.storage.products, id: \.self) { product in
                 Text(product.name ?? "no name")
             }
         }
