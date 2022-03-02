@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E9CBF65727B5543300DDA477 /* iFridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF65627B5543300DDA477 /* iFridgeApp.swift */; };
-		E9CBF65927B5543300DDA477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF65827B5543300DDA477 /* ContentView.swift */; };
 		E9CBF65B27B5543400DDA477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF65A27B5543400DDA477 /* Assets.xcassets */; };
 		E9CBF65E27B5543400DDA477 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF65D27B5543400DDA477 /* Preview Assets.xcassets */; };
 		E9CBF66627B554F100DDA477 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF66427B554F100DDA477 /* Main.xcdatamodeld */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		E9CBF65327B5543300DDA477 /* iFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CBF65627B5543300DDA477 /* iFridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFridgeApp.swift; sourceTree = "<group>"; };
-		E9CBF65827B5543300DDA477 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9CBF65A27B5543400DDA477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CBF65D27B5543400DDA477 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9CBF66527B554F100DDA477 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				E9CBF67127B5626900DDA477 /* Extension */,
 				E9CBF66827B5572100DDA477 /* Core */,
 				E9CBF66727B5571200DDA477 /* CoreData */,
-				E9CBF65827B5543300DDA477 /* ContentView.swift */,
 				E9CBF65A27B5543400DDA477 /* Assets.xcassets */,
 				E9CBF65C27B5543400DDA477 /* Preview Content */,
 				E9CBF66427B554F100DDA477 /* Main.xcdatamodeld */,
@@ -193,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CBF66627B554F100DDA477 /* Main.xcdatamodeld in Sources */,
-				E9CBF65927B5543300DDA477 /* ContentView.swift in Sources */,
 				E9CBF67327B5627B00DDA477 /* PreviewProvider+Ext.swift in Sources */,
 				E9CBF67027B5619700DDA477 /* ProductsView.swift in Sources */,
 				E9CBF66B27B5578700DDA477 /* CoreDataStore.swift in Sources */,
